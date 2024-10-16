@@ -1,0 +1,315 @@
+:root {
+  /* Image of rack background base sizes */
+  --base-height: 300.52px;
+
+  --medium-screen-height: 400px;
+  --large-screen-height: 500px;
+  --aspect-ratio: calc(211.37 / 300.52);
+
+  --bottom-shelf-height: 151.76px;
+  --shelf-ratio: calc(211.37 / 151.76);
+
+  /* Item Base Sizes */
+  /* Base scale factor for mobile view */
+  --width-to-height-ratio: 1; 
+
+  /* Initial Base Sizes calculated with the width-to-height ratio */
+
+  /*Top shelf items*/
+  --item-bottle-width: calc(37px * var(--width-to-height-ratio));
+  --item-bottle-height: calc(var(--item-bottle-width) * (124.12 / 37));
+
+  --item-milk-width: calc(37px * var(--width-to-height-ratio));
+  --item-milk-height: calc(var(--item-milk-width) * (90.73 / 37));
+
+  --item-jam-width: calc(46px * var(--width-to-height-ratio));
+  --item-jam-height: calc(var(--item-jam-width) * (41.34 / 46));
+
+  --item-cheese-width: calc(36.2px * var(--width-to-height-ratio));
+  --item-cheese-height: calc(var(--item-cheese-width) * (34.38 / 36.2));
+
+  /*Middle shelf items*/
+  --item-meat-width: calc(49px * var(--width-to-height-ratio));
+  --item-meat-height: calc(var(--item-meat-width) * (48.76 / 49));
+
+  --item-chicken-width: calc(54.47px * var(--width-to-height-ratio));
+  --item-chicken-height: calc(var(--item-chicken-width) * (49.85 / 54.47));
+
+  --item-pack-width: calc(76.17px * var(--width-to-height-ratio));
+  --item-pack-height: calc(var(--item-pack-width) * (46.98 / 76.17));
+
+  /*Bottom shelf items*/
+
+  --item-pineapple-width: calc(35px * var(--width-to-height-ratio));
+  --item-pineapple-height: calc(var(--item-pineapple-width) * (74.08 / 35));
+
+  --item-banana-width: calc(47px * var(--width-to-height-ratio));
+  --item-banana-height: calc(var(--item-banana-width) * (47.41 / 47));
+
+  --item-apple-width: calc(31px * var(--width-to-height-ratio));
+  --item-apple-height: calc(var(--item-apple-width) * (35.99 / 31));
+
+  --item-salad-width: calc(61.74px * var(--width-to-height-ratio));
+  --item-salad-height: calc(var(--item-salad-width) * (50.98 / 61.74));
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 28px 44.63px 140.65px 44px;
+}
+
+.banner {
+  position: relative;
+  height: var(--base-height);
+  margin: auto;
+  width: calc(var(--aspect-ratio) * var(--base-height));
+}
+.banner__shelf {
+  height: 100%;
+  width: 100%;
+}
+.banner__shelf--top {
+  display: flex;
+  width: 100%;
+  z-index: 9;
+}
+.banner__rack-image {
+  display: block;
+  height: 100%;
+  z-index: 0;
+}
+
+.banner__shelf-image {
+  position: absolute;
+
+  width: 100%;
+}
+.banner__shelf-image--top {
+  top: calc(var(--base-height) * (1 / 3) + 15px);
+  z-index: 2;
+  width: 100%;
+}
+
+.banner__shelf-image--middle {
+  top: calc(var(--base-height) * (2 / 3) + 8px);
+
+  z-index: 3;
+}
+
+.banner__shelf-image--bottom {
+  top: calc(var(--base-height) * (3 / 3));
+}
+.banner__shelf--bottom {
+  height: var(--bottom-shelf-height);
+  margin: auto;
+  width: calc(var(--shelf-ratio) * var(--bottom-shelf-height));
+}
+
+.banner__items {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+}
+.banner__items--top-wrapper {
+  top: -3px;
+  bottom: calc(var(--base-height) * (1 / 3));
+  padding: 0 10.76px 0 20.43px;
+  z-index: 10;
+}
+.banner__items--middle-wrapper {
+  bottom: calc(var(--base-height) * (1 / 3) - 24px);
+  padding-left: 9px;
+  z-index: 11;
+}
+.banner__items--bottom-wrapper {
+  top: calc(var(--base-height) * (2 / 3) + 40px);
+  /* padding-left: 12px; */
+  z-index: 11;
+  width: 100%;
+}
+
+/* Items from top shelf */
+.banner__item-image--bottle {
+  width: var(--item-bottle-width);
+  height: var(--item-bottle-height);
+  margin-right: 5px;
+}
+
+.banner__item-image--milk {
+  width: var(--item-milk-width);
+  height: var(--item-milk-height);
+  margin-right: 2px;
+}
+
+.banner__item-image--jam {
+  width: var(--item-jam-width);
+  height: var(--item-jam-height);
+  margin-right: 9px;
+}
+
+.banner__item-image--cheese {
+  position: relative;
+  top: 3px;
+  width: var(--item-cheese-width);
+  height: var(--item-cheese-height);
+}
+
+/* Items from middle shelf */
+
+.banner__item-image--meat {
+  width: var(--item-meat-width);
+  height: var(--item-meat-height);
+  margin-right: 7.91px;
+  position: relative;
+  top: -2px;
+}
+.banner__item-image--chicken {
+  width: var(--item-chicken-width);
+  height: var(--item-chicken-height);
+  margin-right: 9.45px;
+  position: relative;
+  top: 4px;
+}
+.banner__item-image--pack {
+  width: var(--item-pack-width);
+  height: var(--item-pack-height);
+}
+
+/* Items from bottom shelf */
+
+.banner__item-image--pineapple {
+  width: var(--item-pineapple-width);
+  height: var(--item-pineapple-height);
+ margin: 0 10px 0 12px;
+ /* margin-right:10px; */
+  top: -2px;
+  position: relative;
+}
+.banner__item-image--banana {
+  position: relative;
+  top: -2px;
+ margin-right: 10px;
+  width: var(--item-banana-width);
+  height: var(--item-banana-height);
+}
+.banner__item-image--apple {
+  margin-right: 10px;
+  width: var(--item-apple-width);
+  height: var(--item-apple-height);
+}
+.banner__item-image--salad {
+  position: relative;
+  top: 4px;
+  width: var(--item-salad-width);
+  height: var(--item-salad-height);
+}
+
+@media (min-width: 600px) {
+  .banner {
+    height: var(--medium-screen-height);
+    width: calc(var(--aspect-ratio) * var(--medium-screen-height));
+  }
+
+  .banner__shelf-image--top {
+    top: calc(var(--medium-screen-height) * (1 / 3) + 15px);
+  }
+
+  .banner__shelf-image--middle {
+    top: calc(var(--medium-screen-height) * (2 / 3) + 8px);
+  }
+
+  .banner__shelf-image--bottom {
+    top: calc(var(--medium-screen-height) * (3 / 3));
+  }
+
+
+  .banner__shelf--bottom {
+    height: var(--medium-screen-height);
+    margin: auto;
+    width: calc(var(--shelf-ratio) * var(--medium-screen-height));
+  }
+
+  .banner__items--top-wrapper {
+    /* top:-25px; */
+    bottom: calc(var(--medium-screen-height) * (1 / 3));
+    justify-content: center;
+    top: 8px;
+  }
+  .banner__items--middle-wrapper {
+    bottom: calc(var(--medium-screen-height) * (1 / 3) - 28px);
+    justify-content: center;
+  }
+  .banner__items--bottom-wrapper {
+    top: calc(var(--medium-screen-height) * (2 / 3) + 59px);
+    justify-content: center;
+  }
+
+  :root {
+    --width-to-height-ratio: 1.2;
+  }
+}
+
+@media (min-width: 900px) {
+  .banner {
+    height: var(--large-screen-height);
+    width: calc(var(--aspect-ratio) * var(--large-screen-height));
+  }
+
+  .banner__shelf-image--top {
+    top: calc(var(--large-screen-height) * (1 / 3) + 18px);
+  }
+
+  .banner__shelf-image--middle {
+    top: calc(var(--large-screen-height) * (2 / 3) + 5px);
+  }
+  .banner__shelf-image--bottom {
+    top: calc(var(--large-screen-height) * (3 / 3));
+  }
+  .banner__shelf--bottom {
+    height: var(--large-screen-height);
+    margin: auto;
+    width: calc(var(--shelf-ratio) * var(--large-screen-height));
+  }
+
+  .banner__items--top-wrapper {
+    top: 9px;
+    bottom: calc(var(--large-screen-height) * (1 / 3));
+
+    justify-content: space-evenly;
+  }
+  .banner__items--middle-wrapper {
+    bottom: calc(var(--large-screen-height) * (1 / 3) - 30px);
+    justify-content: space-evenly;
+  }
+
+  .banner__items--bottom-wrapper {
+  top: calc(var(--large-screen-height) * (3 / 3) - 90px);
+    justify-content: center;
+  }
+
+  :root {
+    --width-to-height-ratio: 1.5;
+  }
+}
+
+/* .banner__basket {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  max-width: 50px; 
+}
+
+.banner__pay-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}  */

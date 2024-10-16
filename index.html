@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Тестовый геймифицированный баннер." />
+    <title>Тестовый баннер</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!--Banner-->
+    <aside class="banner">
+      <!-- Image representing the whole Rack -->
+      <img src="/assets/rack_img.png" alt="Стеллаж" class="banner__rack-image" />
+      <div class="banner__shelf banner__shelf--top" aria-label="Верхняя полка">
+        <!-- Top shelf image -->
+
+        <img src="/assets/shelf_img.png" alt="Верхняя полка" class="banner__shelf-image banner__shelf-image--top" />
+        <!-- Items on the top shelf -->
+
+        <div class="banner__items banner__items--top-wrapper">
+          <img src="/assets/bottle_img.png" alt="Бутылка" class="banner__item-image banner__item-image--bottle" />
+          <img src="/assets/milk_img.png" alt="Молоко" class="banner__item-image banner__item-image--milk" />
+          <img src="/assets/jam_img.png" alt="Джем" class="banner__item-image banner__item-image--jam" />
+          <img src="/assets/cheese_img.png" alt="Сыр" class="banner__item-image banner__item-image--cheese" />
+        </div>
+      </div>
+
+      <!-- Middle shelf -->
+      <div class="banner__shelf banner__shelf--middle" aria-label="Средняя полка">
+        <!-- Middle shelf image -->
+
+        <img src="/assets/shelf_img.png" alt="Средняя полка" class="banner__shelf-image banner__shelf-image--middle" />
+        <!-- Items on the middle shelf -->
+
+        <div class="banner__items banner__items--middle-wrapper">
+          <img src="/assets/meat_img.png" alt="Мясо" class="banner__item-image banner__item-image--meat" />
+          <img src="/assets/chicken_img.png" alt="Курица" class="banner__item-image banner__item-image--chicken" />
+          <img src="/assets/pack_img.png" alt="Упаковка" class="banner__item-image banner__item-image--pack" />
+        </div>
+      </div>
+
+      <!-- Bottom shelf -->
+      <div class="banner__shelf banner__shelf--bottom" aria-label="Нижняя полка">
+        <!-- Bottom shelf image -->
+
+        <img src="/assets/bottom_shelf_img.png" alt="Нижняя полка" class="banner__shelf-image banner__shelf-image--bottom" />
+        <!-- Items on the bottom shelf -->
+        <div class="banner__items banner__items--bottom-wrapper">
+          <img src="/assets/pineapple_img.png" alt="Ананас" class="banner__item-image banner__item-image--pineapple" />
+          <img src="/assets/banana_img.png" alt="Банан" class="banner__item-image banner__item-image--banana" />
+          <img src="/assets/apple_img.png" alt="Яблоко" class="banner__item-image banner__item-image--apple" />
+          <img src="/assets/salad_img.png" alt="Салат" class="banner__item-image banner__item-image--salad" />
+        </div>
+      </div>
+
+      <!-- Basket and button for payment -->
+      <!-- <img src="/assets/basket.png" class="banner__basket" />
+        <button id="payButton" class="banner__pay-button">Оплатить корзину</button> -->
+    </aside>
+    <script src="/index.js"></script>
+  </body>
+</html>
